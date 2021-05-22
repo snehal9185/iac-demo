@@ -1,5 +1,5 @@
 resource "aws_route_table" "example" {
-  vpc_id = aws_vpc.example.id
+  vpc_id = "vpc-057e1585d4e33fbc3"
 
   route {
     cidr_block = "10.0.1.0/24"
