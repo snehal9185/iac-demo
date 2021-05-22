@@ -3,12 +3,12 @@ resource "aws_route_table" "example" {
 
   route {
     cidr_block = "10.0.1.0/24"
-    gateway_id = aws_internet_gateway.example.id
+    gateway_id = "igw-0504cdfea50e005ca"
   }
 
   route {
     ipv6_cidr_block        = "::/0"
-    egress_only_gateway_id = aws_egress_only_internet_gateway.example.id
+    egress_only_gateway_id = "igw-0504cdfea50e005ca"
   }
 
   tags = {
