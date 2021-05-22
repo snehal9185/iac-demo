@@ -6,6 +6,6 @@ resource “aws_vpc” “prod-vpc” {
     instance_tenancy = “default”    
     
     tags {
-        Name = “prod-vpc”
+        Environment = “prod-vpc”
     }
 }
