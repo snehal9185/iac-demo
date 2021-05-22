@@ -1,14 +1,1 @@
-resource "aws_route_table" "example" {
-  vpc_id = "vpc-057e1585d4e33fbc3"
-
-  route {
-    cidr_block = "10.0.1.0/24"
-    gateway_id = "igw-0504cdfea50e005ca"
-  }
-
-  
-
-  tags = {
-    Name = "example"
-  }
-}
+variable "subnet_id" {} data "aws_route_table" "selected" { subnet_id = var.subnet_id } resource "aws_route" "route" { route_table_id = data.aws_route_table.selected.id destination_cidr_block = "10.0.1.0/22" vpc_peering_connection_id = "pcx-45ff3dc1" }
