@@ -1,5 +1,5 @@
-resource "aws_s3_bucket" "lonlywolf" {
-    bucket = "lonlywolf22"
+resource "aws_s3_bucket" "awsbucketsnehal" {
+    bucket = "awsbucketsnehal"
     acl = "private"
     
     tags = {
